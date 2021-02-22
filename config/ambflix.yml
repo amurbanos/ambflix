@@ -1,0 +1,9 @@
+default: &default
+  app_name: "Ambflix"
+  app_slogan: "O app do ambulante BR"
+
+development:
+  <<: *default
+
+production:
+  <<: *default
