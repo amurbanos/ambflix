@@ -27,6 +27,16 @@ module Ovumcart
     config.ambflix = config_for(:ambflix)
 
 
+    config.middleware.insert_before 0, Rack::Cors do  
+      allow do
+        origins '*'  
+        resource '*', headers: :any, methods: [:get, :post, :put, :options]
+      end
+    end
+
+    config.i18n.default_locale = :'pt-BR'
+
+    config.time_zone = 'Brasilia'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
@@ -35,6 +45,6 @@ module Ovumcart
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
-    config.api_only = true
+    # config.api_only = true
   end
 end

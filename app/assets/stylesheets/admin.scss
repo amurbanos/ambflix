@@ -1,0 +1,7 @@
+@import "bootstrap";
+@import "admin/_variables";
+@import "admin/users_login";
+
+body{
+	background-color: $bg-color;
+}
