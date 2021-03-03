@@ -1,0 +1,32 @@
+<div id="app_products">
+
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">Nome</th>
+	      <th scope="col"></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr v-for="product in products" :key="product.id" >
+	      <th scope="row">{{ product.id }}</th>
+	      <td>{{ product.name }}</td>
+	      <td class="text-end" >
+			<button type="button" class="btn btn-light btn-sm">
+				<span class="fa fa-eye"></span>
+			</button>
+			<button type="button" class="btn btn-light btn-sm">
+				<span class="fa fa-edit"></span>
+			</button>
+			<button  v-on:click="deleteUser(user.id)" type="button" class="btn btn-danger btn-sm">
+				<span class="fa fa-trash"></span>
+			</button>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<a href="/admin/products/add" class="btn--add btn btn-success">+</a>
+
+</div>

@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+SET GLOBAL innodb_file_format = Barracuda;
+SET GLOBAL innodb_file_per_table = ON;
+SET GLOBAL innodb_large_prefix = ON;
+SET GLOBAL innodb_default_row_format = 'DYNAMIC';

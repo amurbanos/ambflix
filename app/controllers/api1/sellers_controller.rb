@@ -4,4 +4,9 @@ class Api1::SellersController < ApplicationController
   def index
   end
 
+  # GET SELLER LAST LOCATION  
+  def get_location
+  	
+  end
+
 end

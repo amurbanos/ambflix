@@ -1,7 +1,20 @@
 class Admin::UsersController < Admin::ApplicationController
 
   # LIST USERS     
-  def indexx
+  def index
+    users = User.all
+    @data = Hash.new
+    @data[:users] = users
+  end  
+
+  # ADD USERS     
+  def add
+  end  
+
+  # DELETE USER     
+  def delete
+    user = User.find_by_id(params[:id])
+    user.delete
   end  
 
   # SET LOGIN     

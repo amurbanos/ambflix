@@ -51,3 +51,4 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'whenever', require: false
 gem 'awesome_print'
 gem 'bootstrap', '~> 5.0.0.beta2'  
+gem "font-awesome-rails"

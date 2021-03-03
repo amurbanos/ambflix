@@ -56,6 +56,16 @@ User.create(
     phone:  "82 888888 8888", 
     status: 1
 )
+User.create(
+    id: 6, 
+    level: 2, 
+    name: "Vendedor 3", 
+    email: "vendedor3@ambflix.com",
+    password: "123",
+    credit: "value", 
+    phone:  "82 888888 8888", 
+    status: 1
+)
 
 # Add User/Seller location
 Location.create(
@@ -69,4 +79,20 @@ Location.create(
     longitude: -35.69855422312127,   
     user_id: 5,     
     course_id: nil
+)
+Location.create(
+    latitude: -9.636175274871551,    
+    longitude: -35.69855422312127,   
+    user_id: 6,     
+    course_id: nil
+)
+
+# Add init categories
+product = Product.create(
+    name: "Banana"   
+)
+product.icon.attach(
+    io: File.open(Rails.root.join('app/assets/images/car-banana.png')), 
+    filename: 'car-banana.png',   
+    content_type: 'image/png'
 )

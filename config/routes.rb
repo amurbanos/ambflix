@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post '/users/login', to: 'users#login'   
     # locations
     get '/locations/get_all_closer_to_user', to: 'locations#get_all_closer_to_user'   
+    get '/locations/set_location_user', to: 'locations#set_location_user'   
   end   
 
   # Admin panel 
@@ -17,8 +18,13 @@ Rails.application.routes.draw do
     root to:'users#index'
     # users
     get '/users', to: 'users#index'   
-    get '/users/login', to: 'users#login'   
+    delete '/users', to: 'users#delete'   
+    get  '/users/login', to: 'users#login'   
     post '/users/login', to: 'users#do_login'   
+    # users
+    get  '/products', to: 'products#index'   
+    get  '/products/add', to: 'products#new'   
+    post '/products/add', to: 'products#add'   
   end   
 
 end
